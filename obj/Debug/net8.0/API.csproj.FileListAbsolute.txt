@@ -30,3 +30,4 @@ C:\Users\arimi\Project-8\JavaScript\Neil-Cummings\Ski-Store-React-Redux\react-sk
 C:\Users\arimi\Project-8\JavaScript\Neil-Cummings\Ski-Store-React-Redux\react-ski\api\obj\Debug\net8.0\API.pdb
 C:\Users\arimi\Project-8\JavaScript\Neil-Cummings\Ski-Store-React-Redux\react-ski\api\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\arimi\Project-8\JavaScript\Neil-Cummings\Ski-Store-React-Redux\react-ski\api\obj\Debug\net8.0\ref\API.dll
+C:\Users\arimi\Project-8\JavaScript\Neil-Cummings\Ski-Store-React-Redux\react-ski\api\obj\Debug\net8.0\API.sourcelink.json
