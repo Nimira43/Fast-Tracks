@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NWdssdXfaJs=",
+  "dgSpecHash": "VU3LIy+7Mp4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\react-ski\\api\\API.csproj",
+  "projectFilePath": "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\react-ski\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arimi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\arimi\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
