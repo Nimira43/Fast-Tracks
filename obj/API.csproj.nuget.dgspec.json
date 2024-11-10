@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\Fast-Tracks\\API\\API.csproj": {}
+    "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\Fast-Tracks\\api\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\Fast-Tracks\\API\\API.csproj": {
+    "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\Fast-Tracks\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\Fast-Tracks\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\Fast-Tracks\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\Fast-Tracks\\API\\API.csproj",
+        "projectPath": "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\Fast-Tracks\\api\\API.csproj",
         "packagesPath": "C:\\Users\\arimi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\Fast-Tracks\\API\\obj\\",
+        "outputPath": "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\Fast-Tracks\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arimi\\AppData\\Roaming\\NuGet\\NuGet.Config"
