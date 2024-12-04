@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9oP1ewdK8Lg=",
+  "dgSpecHash": "7WspRYN3O34=",
   "success": true,
-  "projectFilePath": "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\Fast-Tracks\\api\\API.csproj",
+  "projectFilePath": "C:\\Users\\arimi\\Project-8\\JavaScript\\Neil-Cummings\\Ski-Store-React-Redux\\Fast-Tracks\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arimi\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\arimi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
