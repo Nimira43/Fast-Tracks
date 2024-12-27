@@ -15,7 +15,7 @@ public class DbInitializer
     SeedData(context);
   }
 
-  private void SeedData(StoreContext context)
+  private static void SeedData(StoreContext context)
   {
     context.Database.Migrate();
 
