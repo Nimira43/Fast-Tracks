@@ -16,6 +16,7 @@ app.UseCors(opt =>
 {
   opt.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:3000");
 });
+
 app.MapControllers();
 
 DbInitializer.InitDb(app);
