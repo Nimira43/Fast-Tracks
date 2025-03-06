@@ -3,4 +3,11 @@
   font-weight: 300;
 }
 
+.btn-dark {
+  color: #fff;
+  background-color: #000;
+}
 
+.btn-dark:hover {
+  background-color: #111;
+}
