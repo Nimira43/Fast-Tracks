@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Product } from '../models/products'
 import Catalog from '../../features/catalog/Catalog'
+import { Container } from '@mui/material'
 
 function App() {
   const [products, setProducts] = useState<Product[]>([])
@@ -27,10 +28,10 @@ function App() {
   }
 
   return (
-    <div>
-      <h1 style={{ color: 'orangered' }}>Fast Tracks</h1>
+    <Container maxWidth='xl'>
+      <h1>Fast Tracks</h1>
       <Catalog products={products} addProduct={addProduct}/>
-    </div>
+    </Container>
   )
 }
 
