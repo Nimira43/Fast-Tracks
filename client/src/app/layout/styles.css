@@ -5,6 +5,11 @@
   font-weight: 300;
 }
 
+span {
+  font-family: 'Afacad Flux', sans-serif !important;
+  font-weight: 300 !important;
+}
+
 .logo {
   font-family: 'Bangers', cursive;
   color: #008080;

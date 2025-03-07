@@ -10,7 +10,7 @@ type Props = {
 export default function Catalog({ products, addProduct }: Props) {
   return (
     <>
-      <ProductList products={products}/>
+      <ProductList products={products} />
       <Button
         className='btn-teal'
         variant='contained'
