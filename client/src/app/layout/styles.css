@@ -11,8 +11,8 @@ span {
 }
 
 .logo {
-  font-family: 'Bangers', cursive;
-  color: #008080;
+  font-family: 'Bangers', cursive !important;
+  color: #008080 !important;
 }
 
 .btn-dark {
