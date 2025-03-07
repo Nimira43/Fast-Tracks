@@ -29,7 +29,7 @@ function App() {
 
   return (
     <Container maxWidth='xl'>
-      <h1>Fast Tracks</h1>
+      <h1 className='logo'>Fast Tracks</h1>
       <Catalog products={products} addProduct={addProduct}/>
     </Container>
   )
