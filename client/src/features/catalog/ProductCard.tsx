@@ -27,14 +27,14 @@ export default function ProductCard({product}: Props) {
           variant='h6'
           sx={{ color: 'secondary.main'}}
         >
-          <span>£{(product.price / 100).toFixed(2)}</span>
+          <span className='price'>£{(product.price / 100).toFixed(2)}</span>
         </Typography>
       </CardContent>
       <CardActions
         sx={{ justifyContent: 'space-between' }}
       >
-        <Button>Add To Cart</Button>
-        <Button>Review</Button>
+        <Button className='tx-teal'>Add To Cart</Button>
+        <Button className='tx-teal'>Review</Button>
       </CardActions>
     </Card>
   )

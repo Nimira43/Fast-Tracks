@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Product } from '../models/products'
 import Catalog from '../../features/catalog/Catalog'
-import { Container } from '@mui/material'
+import { Button, Container } from '@mui/material'
 
 function App() {
   const [products, setProducts] = useState<Product[]>([])
@@ -30,7 +30,15 @@ function App() {
   return (
     <Container maxWidth='xl'>
       <h1 className='logo'>Fast Tracks</h1>
-      <Catalog products={products} addProduct={addProduct}/>
+      <Button
+        className='btn-teal'
+        variant='contained'
+        // color='warning'
+        onClick={addProduct}
+      >
+        Add Product
+      </Button>
+      <Catalog products={products} />
     </Container>
   )
 }

@@ -30,7 +30,16 @@ span {
 }
 
 .btn-teal:hover {
-  background-color: #02aeae !important;
+  background-color: #02a6a6 !important;
 }
 
-/* Note - main orange xolor is #ED6C02 */
+/* Note - main orange color is #ED6C02 */
+
+.tx-teal {
+  color: #008080 !important;
+}
+
+.price {
+  color: #008080 !important;
+  font-weight: 600 !important;
+}
