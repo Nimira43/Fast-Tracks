@@ -15,8 +15,9 @@ export default function Catalog({ products, addProduct }: Props) {
         ))}
       </ul>
       <Button
+        className='btn-dark'
         variant='contained'
-        color='warning'
+        // color='warning'
         onClick={addProduct}
       >
         Add Product
