@@ -41,7 +41,6 @@ function App() {
         <Button
           className='btn-teal'
           variant='contained'
-          // color='warning'
           onClick={addProduct}
         >
           Add Product
