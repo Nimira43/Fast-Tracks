@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Product } from '../models/products'
 import Catalog from '../../features/catalog/Catalog'
 import { Box, Button, Container, Typography } from '@mui/material';
+import NavBar from './NavBar';
 
 function App() {
   const [products, setProducts] = useState<Product[]>([])
@@ -28,26 +29,30 @@ function App() {
   }
 
   return (
-    <Container maxWidth='xl'>
-      <Box
-        display='flex'
-        justifyContent='center'
-        gap={3}
-        marginY={3}
-      >
-        <Typography variant='h4'>
-          <span className='logo'>Fast Tracks</span>
-        </Typography>
-        <Button
-          className='btn-teal'
-          variant='contained'
-          onClick={addProduct}
+    <>
+      <NavBar />
+      <Container maxWidth='xl'>
+        <Box
+          display='flex'
+          justifyContent='center'
+          gap={3}
+          marginY={3}
         >
-          Add Product
-        </Button>
-      </Box>
-      <Catalog products={products} />
-    </Container>
+          <Typography variant='h4'>
+            <span className='logo'>Fast Tracks</span>
+          </Typography>
+          <Button
+            className='btn-teal'
+            variant='contained'
+            onClick={addProduct}
+          >
+            Add Product
+          </Button>
+        </Box>
+        <Catalog products={products} />
+      </Container>
+    </>
+    
   )
 }
 
