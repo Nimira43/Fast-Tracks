@@ -32,27 +32,9 @@ function App() {
     <>
       <NavBar />
       <Container maxWidth='xl'>
-        <Box
-          display='flex'
-          justifyContent='center'
-          gap={3}
-          marginY={3}
-        >
-          <Typography variant='h4'>
-            <span className='logo'>Fast Tracks</span>
-          </Typography>
-          <Button
-            className='btn-teal'
-            variant='contained'
-            onClick={addProduct}
-          >
-            Add Product
-          </Button>
-        </Box>
         <Catalog products={products} />
       </Container>
     </>
-    
   )
 }
 

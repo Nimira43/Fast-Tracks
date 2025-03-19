@@ -5,7 +5,8 @@ export default function NavBar() {
     <AppBar position='fixed'>
       <Toolbar className='navbar'>
         <Typography variant='h6' >
-          <span className='logo'>Fast Tracks</span></Typography>
+          <span className='logo'>Fast Tracks</span>
+        </Typography>
       </Toolbar>
     </AppBar>
   )
