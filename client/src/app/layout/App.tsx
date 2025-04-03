@@ -26,6 +26,7 @@ function App() {
         <Catalog products={products} />
       </Container>
     </ThemeProvider>
+
   )
 }
 
