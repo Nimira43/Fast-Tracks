@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Product } from '../models/products'
 import Catalog from '../../features/catalog/Catalog'
-import { Container, createTheme, ThemeProvider } from '@mui/material'
+import { Box, Container, createTheme, CssBaseline, ThemeProvider } from '@mui/material'
 import NavBar from './NavBar'
 
 function App() {
@@ -26,11 +26,19 @@ function App() {
   }, [])
     
   return (
-    <ThemeProvider theme={theme} >
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <NavBar />
-      <Container maxWidth='xl' sx={{mt: 15}}>
-        <Catalog products={products} />
-      </Container>
+      <Box
+        sx={{
+          minHeight: '100vh',
+          background: darkMode ? '#111' : '#eee' 
+        }}
+      >
+        <Container maxWidth='xl' sx={{mt: 15}}>
+          <Catalog products={products} />
+        </Container>
+      </Box>
     </ThemeProvider>
 
   )
