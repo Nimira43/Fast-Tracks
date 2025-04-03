@@ -7,9 +7,15 @@ import NavBar from './NavBar'
 function App() {
   const [products, setProducts] = useState<Product[]>([])
 
+  const darkMode = true
+  const paletteType = darkMode ? 'dark' : 'light'
+
   const theme = createTheme({
     palette: {
-      mode: 'dark'
+      mode: paletteType,
+      background: {
+        default: (paletteType === 'light') ? '#eee' : '#111'
+      }
     }
   })
 
