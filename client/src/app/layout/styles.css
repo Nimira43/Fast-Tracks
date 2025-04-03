@@ -12,34 +12,5 @@ span {
 
 .logo {
   font-family: 'Bangers', cursive !important;
-  color: #008080 !important;
 }
 
-.btn-dark {
-  color: #fff !important;
-  background-color: #000 !important;
-}
-
-.btn-dark:hover {
-  background-color: #222 !important;
-}
-
-.btn-teal {
-  color: #fff !important;
-  background-color: #008080 !important;
-}
-
-.btn-teal:hover {
-  background-color: #02a6a6 !important;
-}
-
-/* Note - main orange color is #ED6C02 */
-
-.tx-teal {
-  color: #008080 !important;
-}
-
-.price {
-  color: #008080 !important;
-  font-weight: 600 !important;
-}
