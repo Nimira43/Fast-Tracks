@@ -32,10 +32,11 @@ function App() {
       <Box
         sx={{
           minHeight: '100vh',
-          background: darkMode ? '#111' : '#eee' 
+          background: darkMode ? '#111' : '#eee',
+          py: 6
         }}
       >
-        <Container maxWidth='xl' sx={{mt: 15}}>
+        <Container maxWidth='xl' sx={{mt: 8}}>
           <Catalog products={products} />
         </Container>
       </Box>
