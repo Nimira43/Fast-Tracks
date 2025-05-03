@@ -3,6 +3,8 @@ import App from '../layout/App'
 import HomePage from '../../features/home/HomePage'
 import Catalog from '../../features/catalog/Catalog'
 import ProductDetails from '../../features/catalog/ProductDetails'
+import AboutPage from '../../features/about/AboutPage'
+import ContactPage from '../../features/contact/ContactPage'
 
 export const router = createBrowserRouter([
   {
@@ -22,12 +24,12 @@ export const router = createBrowserRouter([
         element: <ProductDetails />,
       },
       {
-        path: '',
-        element: <HomePage />,
+        path: '/about',
+        element: <AboutPage />,
       },
       {
-        path: '',
-        element: <HomePage />,
+        path: '/contact',
+        element: <ContactPage />,
       },
 
     ]
