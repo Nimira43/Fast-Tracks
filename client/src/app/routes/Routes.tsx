@@ -1,5 +1,7 @@
-export default function Routes() {
-  return (
-    <div>Routes</div>
-  )
-}
+import { createBrowserRouter } from 'react-router-dom'
+
+export const router = createBrowserRouter([
+  {
+    
+  }
+])
