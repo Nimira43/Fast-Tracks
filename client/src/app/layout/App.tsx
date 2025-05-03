@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Catalog from '../../features/catalog/Catalog'
 import { Box, Container, createTheme, CssBaseline, ThemeProvider } from '@mui/material'
 import NavBar from './NavBar'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -35,7 +35,7 @@ function App() {
         }}
       >
         <Container maxWidth='xl' sx={{mt: 8}}>
-          <Catalog />
+          <Outlet />
         </Container>
       </Box>
     </ThemeProvider>
