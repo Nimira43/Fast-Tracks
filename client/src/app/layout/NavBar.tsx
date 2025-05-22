@@ -1,5 +1,5 @@
 import { DarkMode, LightMode } from '@mui/icons-material'
-import { AppBar, IconButton, Toolbar, Typography } from '@mui/material'
+import { AppBar, IconButton, ListItem, Toolbar, Typography } from '@mui/material'
 
 const midLinks = [
   {title: 'catalog', path: '/catalog'},
@@ -29,6 +29,11 @@ export default function NavBar({ darkMode, toggleDarkMode}: Props) {
         >
           {darkMode ? <DarkMode /> : <LightMode sx={{ color: 'yellow' }}/>}
         </IconButton>
+        {midLinks.map(({ title, path }) => (
+          <ListItem>
+            
+          </ListItem>
+        ))}
       </Toolbar>
     </AppBar>
   )
