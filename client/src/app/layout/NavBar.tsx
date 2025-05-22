@@ -1,5 +1,6 @@
 import { DarkMode, LightMode } from '@mui/icons-material'
-import { AppBar, IconButton, ListItem, Toolbar, Typography } from '@mui/material'
+import { AppBar, IconButton, List, ListItem, Toolbar, Typography } from '@mui/material'
+import { NavLink } from 'react-router-dom'
 
 const midLinks = [
   {title: 'catalog', path: '/catalog'},
@@ -29,11 +30,18 @@ export default function NavBar({ darkMode, toggleDarkMode}: Props) {
         >
           {darkMode ? <DarkMode /> : <LightMode sx={{ color: 'yellow' }}/>}
         </IconButton>
-        {midLinks.map(({ title, path }) => (
-          <ListItem>
-            
-          </ListItem>
-        ))}
+        <List sx={{display: 'flex'}}>
+          {midLinks.map(({ title, path }) => (
+            <ListItem
+              component={NavLink} 
+              to={path}
+              key={path}
+              sx={{color: 'inherit', typography: 'h6'}}
+            >
+              {title.toUpperCase()}
+            </ListItem>
+          ))}
+        </List>
       </Toolbar>
     </AppBar>
   )
