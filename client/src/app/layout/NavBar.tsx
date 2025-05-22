@@ -42,6 +42,18 @@ export default function NavBar({ darkMode, toggleDarkMode}: Props) {
             </ListItem>
           ))}
         </List>
+        <List sx={{display: 'flex'}}>
+          {rightLinks.map(({ title, path }) => (
+            <ListItem
+              component={NavLink} 
+              to={path}
+              key={path}
+              sx={{color: 'inherit', typography: 'h6'}}
+            >
+              {title.toUpperCase()}
+            </ListItem>
+          ))}
+        </List>
       </Toolbar>
     </AppBar>
   )
