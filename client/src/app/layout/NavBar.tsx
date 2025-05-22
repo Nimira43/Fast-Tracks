@@ -7,6 +7,11 @@ const midLinks = [
   {title: 'contact', path: '/contact'},
 ]
 
+const rightLinks = [
+  {title: 'login', path: '/login'},
+  {title: 'register', path: '/register'},
+]
+
 type Props = {
   toggleDarkMode: () => void
   darkMode: boolean
