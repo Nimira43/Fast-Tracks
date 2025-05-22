@@ -1,6 +1,10 @@
 import { DarkMode, LightMode } from '@mui/icons-material'
 import { AppBar, IconButton, Toolbar, Typography } from '@mui/material'
 
+const midLinks = [
+  
+]
+
 type Props = {
   toggleDarkMode: () => void
   darkMode: boolean
