@@ -22,7 +22,7 @@ export default function NavBar({ darkMode, toggleDarkMode}: Props) {
   return (
     <AppBar position='fixed' color='warning'>
       <Toolbar>
-        <Typography variant='h6' >
+        <Typography component={NavLink} to='/' variant='h6'>
           <span className='logo'>Fast Tracks</span>
         </Typography>
         <IconButton
