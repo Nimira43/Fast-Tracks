@@ -47,7 +47,14 @@ export default function NavBar({ darkMode, toggleDarkMode}: Props) {
               sx={{
                 color: '#fffcfa', 
                 typography: 'h6',
-                textDecoration: 'none'
+                textDecoration: 'none',
+                '&:hover': {
+                  color: '#fbe04a'
+                },
+                transition: '0.6s',
+                '&.active': {
+                  color: '#fbe04a'
+                }
               }}
             >
               {title.toUpperCase()}

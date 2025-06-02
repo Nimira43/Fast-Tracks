@@ -13,6 +13,6 @@
 
 /* Cart badge styling */
 button span span {
-  background-color: gold !important;
-  color: black !important;
+  background-color: #ffd700 !important;
+  color: #111 !important;
 }
