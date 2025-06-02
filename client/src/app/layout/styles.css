@@ -14,3 +14,8 @@ span {
   font-family: 'Bangers', cursive !important;
 }
 
+/* Cart badge styling */
+button span span {
+  background-color: gold !important;
+  color: black !important;
+}

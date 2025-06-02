@@ -1,5 +1,5 @@
-import { DarkMode, LightMode } from '@mui/icons-material'
-import { AppBar, IconButton, List, ListItem, Toolbar, Typography } from '@mui/material'
+import { DarkMode, LightMode, ShoppingCart } from '@mui/icons-material'
+import { AppBar, Badge, IconButton, List, ListItem, Toolbar, Typography } from '@mui/material'
 import { NavLink } from 'react-router-dom'
 
 const midLinks = [
@@ -20,7 +20,7 @@ type Props = {
 
 export default function NavBar({ darkMode, toggleDarkMode}: Props) {
   return (
-    <AppBar position='fixed'>
+    <AppBar position='fixed' color='warning'>
       <Toolbar>
         <Typography variant='h6' >
           <span className='logo'>Fast Tracks</span>
@@ -42,6 +42,14 @@ export default function NavBar({ darkMode, toggleDarkMode}: Props) {
             </ListItem>
           ))}
         </List>
+
+        <IconButton size='large' sx={{color: 'inherit'}}>
+          <Badge 
+            badgeContent='4'>
+            <ShoppingCart />
+          </Badge>
+        </IconButton>
+
         <List sx={{display: 'flex'}}>
           {rightLinks.map(({ title, path }) => (
             <ListItem
