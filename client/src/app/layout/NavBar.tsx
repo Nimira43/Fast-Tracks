@@ -13,6 +13,19 @@ const rightLinks = [
   {title: 'register', path: '/register'},
 ]
 
+const navStyles = {
+  color: '#fffcfa', 
+  typography: 'h6',
+  textDecoration: 'none',
+  '&:hover': {
+    color: '#f6e896'
+  },
+  transition: '0.6s',
+  '&.active': {
+    color: '#f6e896'
+  }
+}
+
 type Props = {
   toggleDarkMode: () => void
   darkMode: boolean
@@ -26,10 +39,7 @@ export default function NavBar({ darkMode, toggleDarkMode}: Props) {
           component={NavLink} 
           to='/' 
           variant='h6'
-          sx={{ 
-            textDecoration: 'none', 
-            color: '#fffcfa'
-          }}
+          sx={navStyles}
         >
           <span className='logo'>Fast Tracks</span>
         </Typography>
@@ -44,18 +54,7 @@ export default function NavBar({ darkMode, toggleDarkMode}: Props) {
               component={NavLink} 
               to={path}
               key={path}
-              sx={{
-                color: '#fffcfa', 
-                typography: 'h6',
-                textDecoration: 'none',
-                '&:hover': {
-                  color: '#fbe04a'
-                },
-                transition: '0.6s',
-                '&.active': {
-                  color: '#fbe04a'
-                }
-              }}
+              sx={navStyles}
             >
               {title.toUpperCase()}
             </ListItem>
@@ -75,10 +74,7 @@ export default function NavBar({ darkMode, toggleDarkMode}: Props) {
               component={NavLink} 
               to={path}
               key={path}
-              sx={{
-                color: '#fffcfa', 
-                typography: 'h6'
-              }}
+              sx={navStyles}
             >
               {title.toUpperCase()}
             </ListItem>
