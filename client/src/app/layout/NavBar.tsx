@@ -22,7 +22,15 @@ export default function NavBar({ darkMode, toggleDarkMode}: Props) {
   return (
     <AppBar position='fixed' color='warning'>
       <Toolbar>
-        <Typography component={NavLink} to='/' variant='h6'>
+        <Typography 
+          component={NavLink} 
+          to='/' 
+          variant='h6'
+          sx={{ 
+            textDecoration: 'none', 
+            color: '#fffcfa'
+          }}
+        >
           <span className='logo'>Fast Tracks</span>
         </Typography>
         <IconButton
@@ -36,14 +44,18 @@ export default function NavBar({ darkMode, toggleDarkMode}: Props) {
               component={NavLink} 
               to={path}
               key={path}
-              sx={{color: 'inherit', typography: 'h6'}}
+              sx={{
+                color: '#fffcfa', 
+                typography: 'h6',
+                textDecoration: 'none'
+              }}
             >
               {title.toUpperCase()}
             </ListItem>
           ))}
         </List>
 
-        <IconButton size='large' sx={{color: 'inherit'}}>
+        <IconButton size='large' sx={{color: '#fffcfa'}}>
           <Badge 
             badgeContent='4'>
             <ShoppingCart />
@@ -56,7 +68,10 @@ export default function NavBar({ darkMode, toggleDarkMode}: Props) {
               component={NavLink} 
               to={path}
               key={path}
-              sx={{color: 'inherit', typography: 'h6'}}
+              sx={{
+                color: '#fffcfa', 
+                typography: 'h6'
+              }}
             >
               {title.toUpperCase()}
             </ListItem>
