@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { Product } from '../../app/models/products'
 import { useEffect, useState } from 'react'
-import { Grid2 } from '@mui/material'
+import { Grid2, Typography } from '@mui/material'
 
 export default function ProductDetails() {
   const { id } = useParams()
@@ -24,8 +24,12 @@ export default function ProductDetails() {
       <Grid2 size={6}>
         <img 
           src={product?.pictureUrl}
-
+          alt={product.name}
+          style={{width: '100%'}}
         />
+      </Grid2>
+      <Grid2 size={6}>
+        <Typography variant='h3'>{product.name}</Typography>
       </Grid2>
     </Grid2>
   )
