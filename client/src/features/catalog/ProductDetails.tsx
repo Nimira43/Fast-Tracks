@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { Product } from '../../app/models/products'
 import { useEffect, useState } from 'react'
-import { Divider, Grid2, Table, TableBody, TableContainer, TextField, Typography } from '@mui/material'
+import { Button, Divider, Grid2, Table, TableBody, TableContainer, TextField, Typography } from '@mui/material'
 
 export default function ProductDetails() {
   const { id } = useParams()
@@ -49,7 +49,33 @@ export default function ProductDetails() {
               label='Quantity in Basket'
               fullWidth
               defaultValue={1}
+              color='warning'
+              sx={{
+                '& input[type=number]': {
+                  MozAppearance: 'textfield',
+                },
+                '& input[type=number]::-webkit-outer-spin-button': {
+                  WebkitAppearance: 'none',
+                  margin: 0,
+                },
+                '& input[type=number]::-webkit-inner-spin-button': {
+                  WebkitAppearance: 'none',
+                  margin: 0,
+                },
+              }}
             />
+          </Grid2>
+          <Grid2 size={6}>
+            <Button
+              color='warning'
+              size='large'
+              variant='contained'
+              fullWidth
+              style={{textTransform: 'uppercase'}}
+              
+            >
+              Add to Cart
+            </Button>
           </Grid2>
         </Grid2>
       </Grid2>
