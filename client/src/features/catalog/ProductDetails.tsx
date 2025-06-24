@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { Product } from '../../app/models/products'
 import { useEffect, useState } from 'react'
-import { Divider, Grid2, Table, TableBody, TableContainer, Typography } from '@mui/material'
+import { Divider, Grid2, Table, TableBody, TableContainer, TextField, Typography } from '@mui/material'
 
 export default function ProductDetails() {
   const { id } = useParams()
@@ -41,7 +41,17 @@ export default function ProductDetails() {
             </TableBody>
           </Table>
         </TableContainer>
-        
+        <Grid2 container spacing={2} marginTop={3}>
+          <Grid2 size={6}>
+            <TextField 
+              variant='outlined'
+              type='number'
+              label='Quantity in Basket'
+              fullWidth
+              defaultValue={1}
+            />
+          </Grid2>
+        </Grid2>
       </Grid2>
     </Grid2>
   )
