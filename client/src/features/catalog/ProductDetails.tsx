@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { Product } from '../../app/models/products'
 import { useEffect, useState } from 'react'
-import { Divider, Grid2, Typography } from '@mui/material'
+import { Divider, Grid2, Table, TableBody, TableContainer, Typography } from '@mui/material'
 
 export default function ProductDetails() {
   const { id } = useParams()
@@ -34,6 +34,14 @@ export default function ProductDetails() {
         <Typography variant='h4' color='warning'>
           £{(product.price / 100).toFixed(2)}
         </Typography>
+        <TableContainer>
+          <Table>
+            <TableBody>
+              table will go here
+            </TableBody>
+          </Table>
+        </TableContainer>
+        
       </Grid2>
     </Grid2>
   )
