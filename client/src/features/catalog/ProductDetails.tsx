@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom'
 
 export default function ProductDetails() {
-  const { } = useParams
+  const { id } = useParams()
+  const [product, setProduct] = useState()
   return (
     <div>ProductDetails</div>
   )
