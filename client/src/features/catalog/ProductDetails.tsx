@@ -11,9 +11,9 @@ export default function ProductDetails() {
       .then(response => response.json())
       .then(data => setProduct(data))
       .catch(error => console.log(error))
-  }, [])
+  }, [id])
 
   return (
-    <div>ProductDetails</div>
+    <div>{product?.name}</div>
   )
 }
