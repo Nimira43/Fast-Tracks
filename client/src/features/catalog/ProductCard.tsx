@@ -48,7 +48,7 @@ export default function ProductCard({product}: Props) {
         </Button>
         <Button
           component={Link} 
-          to={`/catalog/{product.id}`} 
+          to={`/catalog/${product.id}`} 
           className='tx-teal'
         >
           View
