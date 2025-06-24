@@ -8,6 +8,9 @@ export default function ProductDetails() {
 
   useEffect(() => {
     fetch(`https://localhost:5001/api/products/${id}`)
+      .then(response => response.json())
+      .then(data => setProduct(data))
+      .catch(error => console.log(error))
   }, [])
 
   return (
