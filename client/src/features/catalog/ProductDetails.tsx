@@ -21,6 +21,22 @@ export default function ProductDetails() {
       label: 'Name',
       value: product.name
     },
+    {
+      label: 'Description',
+      value: product.description
+    },
+    {
+      label: 'Type',
+      value: product.type
+    },
+    {
+      label: 'Brand',
+      value: product.brand
+    },
+    {
+      label: 'Quantity in stock',
+      value: product.quantityInStock
+    },
   ]
 
   return (
