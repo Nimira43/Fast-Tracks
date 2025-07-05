@@ -58,11 +58,13 @@ export default function ProductDetails() {
           £{(product.price / 100).toFixed(2)}
         </Typography>
         <TableContainer>
-          <Table>
+          <Table sx={{
+            '& td': {fontSize: '1rem'}
+          }}>
             <TableBody>
               {productDetails.map((detail, index) => (
                 <TableRow>
-                  <TableCell sx={{fontWeight: 'semibold'}}>
+                  <TableCell sx={{fontWeight: 'bold'}}>
                     {detail.label}
                   </TableCell>
                   <TableCell>{detail.value}</TableCell>
