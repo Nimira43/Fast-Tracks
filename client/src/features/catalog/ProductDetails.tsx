@@ -65,6 +65,7 @@ export default function ProductDetails() {
                   <TableCell sx={{fontWeight: 'semibold'}}>
                     {detail.label}
                   </TableCell>
+                  <TableCell>{detail.value}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
