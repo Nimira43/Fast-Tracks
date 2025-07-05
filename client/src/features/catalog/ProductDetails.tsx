@@ -16,6 +16,13 @@ export default function ProductDetails() {
 
   if (!product) return <div>Loading...</div>
 
+  const productDetails = [
+    {
+      label: 'Name',
+      value: product.name
+    },
+  ]
+
   return (
     <Grid2 
       container spacing={6} maxWidth='lg'
