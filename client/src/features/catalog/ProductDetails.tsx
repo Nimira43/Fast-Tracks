@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { Product } from '../../app/models/products'
 import { useEffect, useState } from 'react'
-import { Button, Divider, Grid2, Table, TableBody, TableContainer, TextField, Typography } from '@mui/material'
+import { Button, Divider, Grid2, Table, TableBody, TableContainer, TableRow, TextField, Typography } from '@mui/material'
 
 export default function ProductDetails() {
   const { id } = useParams()
@@ -60,7 +60,11 @@ export default function ProductDetails() {
         <TableContainer>
           <Table>
             <TableBody>
-              table will go here
+              {productDetails.map((detail, index) => (
+                <TableRow>
+                
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
         </TableContainer>
