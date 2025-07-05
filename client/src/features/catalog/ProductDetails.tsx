@@ -99,6 +99,7 @@ export default function ProductDetails() {
           </Grid2>
           <Grid2 size={6}>
             <Button
+            sx={{height: '55px'}}
               color='warning'
               size='large'
               variant='contained'
