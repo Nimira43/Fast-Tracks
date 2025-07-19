@@ -40,7 +40,7 @@ export default function ProductDetails() {
   ]
 
   return (
-    <Grid2 
+    <Grid2       
       container spacing={6} maxWidth='lg'
       sx={{mx: 'auto'}}
     >
@@ -61,9 +61,9 @@ export default function ProductDetails() {
           <Table sx={{
             '& td': {fontSize: '1rem'}
           }}>
-            <TableBody>
+            <TableBody > 
               {productDetails.map((detail, index) => (
-                <TableRow>
+                <TableRow key={index}>
                   <TableCell sx={{fontWeight: 'bold'}}>
                     {detail.label}
                   </TableCell>
@@ -75,7 +75,7 @@ export default function ProductDetails() {
         </TableContainer>
         <Grid2 container spacing={2} marginTop={3}>
           <Grid2 size={6}>
-            <TextField 
+            <TextField    
               variant='outlined'
               type='number'
               label='Quantity in Basket'
