@@ -61,7 +61,7 @@ export default function ProductDetails() {
           <Table sx={{
             '& td': {fontSize: '1rem'}
           }}>
-            <TableBody > 
+            <TableBody  > 
               {productDetails.map((detail, index) => (
                 <TableRow key={index}>
                   <TableCell sx={{fontWeight: 'bold'}}>
