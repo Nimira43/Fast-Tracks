@@ -8,15 +8,19 @@ const initialState : CounterState = {
 
 export default function counterReducer(
   state = initialState,
-  action: { type: 'string'}
+  action: { type: string}
 ) {
   switch (action.type) {
-    case value:
-      
-      break
-  
-    default:
-      break
+    case 'increment':
+      return {
+        ...state,
+        data: state.data + 1
+      } 
+    case 'decrement':
+      return {
+        ...state,
+        data: state.data - 1
+      }
   }
 
   return state                    
