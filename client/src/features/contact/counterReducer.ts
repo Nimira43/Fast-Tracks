@@ -21,7 +21,7 @@ export default function counterReducer(
         ...state,
         data: state.data - 1
       }
-  }
-
-  return state                    
+    default:
+      return state
+  }                    
 }
