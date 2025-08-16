@@ -31,12 +31,12 @@ export default function counterReducer(
     case 'increment':
       return {
         ...state,
-        data: state.data + 1
+        data: state.data + action.payload
       } 
     case 'decrement':
       return {
         ...state,
-        data: state.data - 1
+        data: state.data - action.payload
       }
     default:
       return state
