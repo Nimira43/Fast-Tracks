@@ -17,6 +17,11 @@ export default function ContactPage() {
       </Typography>
       <ButtonGroup>
         <Button
+          onClick={() => dispatch(decrement(5))} 
+          color='error'
+          >Decrement By 5
+        </Button>
+        <Button
           onClick={() => dispatch(decrement())} 
           color='error'
           >Decrement
