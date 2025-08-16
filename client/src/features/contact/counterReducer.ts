@@ -22,7 +22,10 @@ export function decrement(amount = 1) {
 
 export default function counterReducer(
   state = initialState,
-  action: { type: string}
+  action: { 
+      type: string,
+      payload: number
+  },
 ) {
   switch (action.type) {
     case 'increment':
