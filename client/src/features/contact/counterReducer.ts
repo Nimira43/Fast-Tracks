@@ -7,7 +7,10 @@ const initialState : CounterState = {
 }
 
 export function increment(amount = 1) {
-
+  return {
+    type: 'increment',
+    payload: amount
+  }
 }
 
 export default function counterReducer(
