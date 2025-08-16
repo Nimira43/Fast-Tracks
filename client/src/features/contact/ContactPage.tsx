@@ -26,6 +26,11 @@ export default function ContactPage() {
           color='success'
           >Increment
         </Button>
+        <Button
+          onClick={() => dispatch(increment(5))} 
+          color='success'
+          >Increment By 5
+        </Button>
       </ButtonGroup>
     </>
   )
