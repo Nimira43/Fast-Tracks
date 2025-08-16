@@ -13,6 +13,13 @@ export function increment(amount = 1) {
   }
 }
 
+export function decrement(amount = 1) {
+  return {
+    type: 'decrement',
+    payload: amount
+  }
+}
+
 export default function counterReducer(
   state = initialState,
   action: { type: string}
