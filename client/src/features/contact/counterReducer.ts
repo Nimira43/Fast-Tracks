@@ -6,6 +6,10 @@ const initialState : CounterState = {
   data: 42
 }
 
+export function increment(amount = 1) {
+
+}
+
 export default function counterReducer(
   state = initialState,
   action: { type: string}
