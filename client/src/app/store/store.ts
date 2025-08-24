@@ -7,7 +7,9 @@ export const store = configureStore({
   reducer: {
     [catalogApi.reducerPath]: catalogApi.reducer,
     counter: counterSlice.reducer
-  }
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(catalogApi.middleware)
 })
 
 export type RootState = ReturnType<typeof store.getState>
