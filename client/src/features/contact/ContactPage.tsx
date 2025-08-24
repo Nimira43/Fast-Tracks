@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { CounterState, decrement, increment } from './counterReducer'
 import { Button, ButtonGroup, Typography } from '@mui/material'
+import { useAppDispatch, useAppSelector } from '../../app/store/store'
 
 export default function ContactPage() {
-  const data = useSelector()
+  const data = useAppSelector(state => state.counter)
 
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   return (
     <>
