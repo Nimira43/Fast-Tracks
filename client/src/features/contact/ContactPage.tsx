@@ -15,19 +15,14 @@ export default function ContactPage() {
       <Typography variant='body1'>
         The data is: {data}
       </Typography>
-      <ButtonGroup>
+      <ButtonGroup> 
         <Button
-          onClick={() => dispatch(decrement(5))} 
-          color='error'
-          >Decrement By 5
-        </Button> 
-        <Button
-          onClick={() => dispatch(decrement())} 
+          onClick={() => dispatch(decrement(1))} 
           color='error'
           >Decrement
         </Button>
         <Button
-          onClick={() => dispatch(increment())} 
+          onClick={() => dispatch(increment(1))} 
           color='success'
           >Increment
         </Button>

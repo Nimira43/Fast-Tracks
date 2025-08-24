@@ -23,20 +23,6 @@ export const counterSlice = createSlice({
 
 export  const { increment, decrement} = counterSlice.actions
 
-// export function increment(amount = 1) {
-//   return {
-//     type: 'increment',
-//     payload: amount
-//   }
-// }
-
-// export function decrement(amount = 1) {
-//   return {
-//     type: 'decrement',
-//     payload: amount
-//   }
-// }
-
 export default function counterReducer(
   state = initialState,
   action: { 
