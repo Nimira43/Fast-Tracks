@@ -11,6 +11,9 @@ export const catalogApi = createApi({
       query: () => ({
         url: 'products'
       })
-    })
+    }),
+    fetchProductDetails: builder.query<Product, number>({
+      query: (productId) => `products/${productId}` 
+    }) 
   })
 })
