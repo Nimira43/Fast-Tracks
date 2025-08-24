@@ -3,7 +3,7 @@ import { CounterState, decrement, increment } from './counterReducer'
 import { Button, ButtonGroup, Typography } from '@mui/material'
 
 export default function ContactPage() {
-  const data = useSelector((state: CounterState) => state.data)
+  const data = useSelector()
 
   const dispatch = useDispatch()
 
