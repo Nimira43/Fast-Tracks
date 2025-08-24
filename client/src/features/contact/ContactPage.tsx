@@ -20,7 +20,7 @@ export default function ContactPage() {
           onClick={() => dispatch(decrement(5))} 
           color='error'
           >Decrement By 5
-        </Button>
+        </Button> 
         <Button
           onClick={() => dispatch(decrement())} 
           color='error'
