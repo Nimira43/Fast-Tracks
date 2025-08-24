@@ -1,5 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { CounterState, decrement, increment } from './counterReducer'
+import { decrement, increment } from './counterReducer'
 import { Button, ButtonGroup, Typography } from '@mui/material'
 import { useAppDispatch, useAppSelector } from '../../app/store/store'
 
