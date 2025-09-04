@@ -5,14 +5,7 @@ import { Button, Divider, Grid2, Table, TableBody, TableCell, TableContainer, Ta
 
 export default function ProductDetails() {
   const { id } = useParams()
-  const [product, setProduct] = useState  <Product | null>(null)
 
-  useEffect(() => {
-    fetch(`https://localhost:5001/api/products/${id}`)
-      .then(response => response.json())
-      .then(data => setProduct(data))
-      .catch(error => console.log(error))
-  }, [id])
 
   if (!product) return <div>Loading...</div>
 
