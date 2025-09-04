@@ -1,16 +1,13 @@
 import { useParams } from 'react-router-dom'
-import { Product } from '../../app/models/products'
-import { useEffect, useState } from 'react'
 import { Button, Divider, Grid2, Table, TableBody, TableCell, TableContainer, TableRow, TextField, Typography } from '@mui/material'
 import { useFetchProductDetailsQuery } from './catalogApi'
 
 export default function ProductDetails() {
   const { id } = useParams()
 
-  const {data: product, isLoading} = useFetchProductDetailsQuery()
+  const {data: product, isLoading} = useFetchProductDetailsQuery(id ? +id : 0)
 
-
-  if (!product) return <div>Loading...</div>
+  if (!product || isLoading) return <div>Loading...</div>
 
   const productDetails = [
     {
