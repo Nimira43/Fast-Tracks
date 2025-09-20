@@ -19,4 +19,5 @@ export const baseQueryWithErrorHandling = async (
     const {status, data} = result.error
     console.log({status, data})
   }
+  return result
 }
