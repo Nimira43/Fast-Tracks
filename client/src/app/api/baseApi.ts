@@ -14,4 +14,9 @@ export const baseQueryWithErrorHandling = async (
   await sleep()
 
   const result = await customBaseQuery(args, api, extraOptions)
+
+  if (result.error) {
+    const {status, data} = result.error
+    console.log({status, data})
+  }
 }
