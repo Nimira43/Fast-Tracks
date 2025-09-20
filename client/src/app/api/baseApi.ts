@@ -10,4 +10,8 @@ export const baseQueryWithErrorHandling = async (
   args: string | FetchArgs, 
   api: BaseQueryApi,
   extraOptions: object
-)
+) => {
+  await sleep()
+
+  const result = await customBaseQuery(args, api, extraOptions)
+}
