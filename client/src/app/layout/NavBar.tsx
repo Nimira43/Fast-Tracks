@@ -1,7 +1,7 @@
 import { DarkMode, LightMode, ShoppingCart } from '@mui/icons-material'
 import { AppBar, Badge, Box, IconButton, List, ListItem, Toolbar, Typography } from '@mui/material'
 import { NavLink } from 'react-router-dom'
-import { useAppDispatch } from '../store/store'
+import { useAppSelector } from '../store/store'
 
 const midLinks = [
   {title: 'catalog', path: '/catalog'},
@@ -33,7 +33,7 @@ type Props = {
 }
 
 export default function NavBar({ darkMode, toggleDarkMode}: Props) {
-  const {isLoading} = useAppDispatch(state => state.ui)
+  const {isLoading} = useAppSelector(state => state.ui)
 
   return (
     <AppBar position='fixed' color='warning'>
