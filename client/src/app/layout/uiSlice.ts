@@ -8,6 +8,9 @@ export const uiSlice = createSlice({
   reducers: {
     startLoading: (state) => {
       state.isLoading = true
+    },
+    stopLoading: (state) => {
+      state.isLoading = false
     }
   }
 })
