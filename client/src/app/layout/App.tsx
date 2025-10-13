@@ -6,7 +6,6 @@ import { Outlet } from 'react-router-dom'
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(getInitialDarkMode())
   const paletteType = darkMode ? 'dark' : 'light'
 
   const theme = createTheme({
@@ -21,10 +20,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <NavBar
-        toggleDarkMode={toggleDarkMode}
-        darkMode={darkMode}
-      />
+      <NavBar />
       <Box
         sx={{
           minHeight: '100vh',
