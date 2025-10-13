@@ -18,11 +18,6 @@ function App() {
     }
   })
 
-  const toggleDarkMode = () => {
-    
-    setDarkMode(!darkMode)
-  }
-    
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
