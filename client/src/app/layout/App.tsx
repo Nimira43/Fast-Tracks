@@ -4,7 +4,8 @@ import NavBar from './NavBar'
 import { Outlet } from 'react-router-dom'
 
 const getInitialDarkMode = () => {
-  
+  const storedDarkMode = localStorage.getItem('darkMode')
+  return storedDarkMode ? JSON.parse(storedDarkMode) : true
 }
 
 function App() {
