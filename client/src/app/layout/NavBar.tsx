@@ -2,6 +2,7 @@ import { DarkMode, LightMode, ShoppingCart } from '@mui/icons-material'
 import { AppBar, Badge, Box, IconButton, LinearProgress, List, ListItem, Toolbar, Typography } from '@mui/material'
 import { NavLink } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../store/store'
+import { setDarkMode } from './uiSlice'
 
 const midLinks = [
   {title: 'catalog', path: '/catalog'},
@@ -54,7 +55,7 @@ export default function NavBar() {
             <span className='logo'>Fast Tracks</span>
           </Typography>
           <IconButton
-            onClick={toggleDarkMode}
+            onClick={() => dispatch(setDarkMode())}
           >
             {darkMode ? <DarkMode /> : <LightMode sx={{ color: 'yellow' }}/>}
           </IconButton>

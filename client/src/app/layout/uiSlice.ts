@@ -25,4 +25,8 @@ export const uiSlice = createSlice({
   }
 })
 
-export const { startLoading, stopLoading } = uiSlice.actions
+export const { 
+  startLoading, 
+  stopLoading,
+  setDarkMode 
+} = uiSlice.actions
