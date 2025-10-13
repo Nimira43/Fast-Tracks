@@ -102,7 +102,8 @@ export default function NavBar({ darkMode, toggleDarkMode}: Props) {
       {isLoading && (
         <Box sx={{width: '100%'}}>
           <LinearProgress 
-            color='warning'          />
+            color='warning' 
+          />
         </Box>
       )}
     </AppBar>

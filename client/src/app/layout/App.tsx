@@ -3,6 +3,10 @@ import { Box, Container, createTheme, CssBaseline, ThemeProvider } from '@mui/ma
 import NavBar from './NavBar'
 import { Outlet } from 'react-router-dom'
 
+const getInitialDarkMode = () => {
+  
+}
+
 function App() {
   const [darkMode, setDarkMode] = useState(false)
   const paletteType = darkMode ? 'dark' : 'light'
