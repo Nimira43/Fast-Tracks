@@ -27,11 +27,6 @@ const navStyles = {
   }
 }
 
-type Props = {
-  toggleDarkMode: () => void
-  darkMode: boolean
-}
-
 export default function NavBar({ darkMode, toggleDarkMode}: Props) {
   const {isLoading} = useAppSelector(state => state.ui)
 
