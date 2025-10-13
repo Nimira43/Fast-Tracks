@@ -8,7 +8,8 @@ const getInitialDarkMode = () => {
 export const uiSlice = createSlice({
   name: 'ui',
   initialState: {
-    isLoading: false
+    isLoading: false,
+    darkMode: getInitialDarkMode()
   },
   reducers: {
     startLoading: (state) => {
