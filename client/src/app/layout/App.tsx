@@ -9,7 +9,7 @@ const getInitialDarkMode = () => {
 }
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(getInitialDarkMode())
   const paletteType = darkMode ? 'dark' : 'light'
 
   const theme = createTheme({
