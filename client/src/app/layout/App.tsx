@@ -22,6 +22,7 @@ function App() {
   })
 
   const toggleDarkMode = () => {
+    localStorage.setItem('darkMode', JSON.stringify(!darkMode))
     setDarkMode(!darkMode)
   }
     
