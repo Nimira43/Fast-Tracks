@@ -7,5 +7,8 @@ public class BuggyController : BaseApiController
 {
 
   [HttpGet("not-found")]
-  public IActionResult GetNotFound() {}
+  public IActionResult GetNotFound()
+  {
+    return NotFound();
+  }
 }
