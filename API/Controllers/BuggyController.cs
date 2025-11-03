@@ -17,10 +17,18 @@ public class BuggyController : BaseApiController
   {
     return BadRequest("This is not a good request");
   }
-  
+
   [HttpGet("unauthorized")]
   public IActionResult GetUnauthorised()
   {
-    return Unauthorized("This is not a good request");
+    return Unauthorized();
+  }
+  
+  [HttpGet("validation-error")]
+  public IActionResult GetValidationError()
+  {
+    ModelState.AddModelError("Problem1", "This is the first error");
+    ModelState.AddModelError("Problem2", "This is the second error");
+    return ValidationProblem();
   }
 }
