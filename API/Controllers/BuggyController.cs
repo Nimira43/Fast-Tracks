@@ -11,4 +11,10 @@ public class BuggyController : BaseApiController
   {
     return NotFound();
   }
+  
+  [HttpGet("bad-request")]
+  public IActionResult GetBadRequest()
+  {
+    return NotFound();
+  }
 }
