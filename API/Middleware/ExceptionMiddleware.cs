@@ -7,8 +7,16 @@ public class ExceptionMiddleware(
   ILogger<ExceptionMiddleware> logger
 ) : IMiddleware
 {
-  public Task InvokeAsync(HttpContext context, RequestDelegate next)
+  public async Task InvokeAsync(HttpContext context, RequestDelegate next)
   {
-    throw new NotImplementedException();
+    try
+    {
+      
+    }
+    catch (System.Exception)
+    {
+      
+      throw;
+    }
   }
 }
