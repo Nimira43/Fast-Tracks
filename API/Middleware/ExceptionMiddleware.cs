@@ -22,6 +22,6 @@ public class ExceptionMiddleware(
 
   private async Task HandleException(HttpContext context, Exception ex)
   {
-    throw new NotImplementedException();
+    logger.LogError(ex, ex.Message);
   }
 }
