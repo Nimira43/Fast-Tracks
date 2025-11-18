@@ -11,12 +11,17 @@ public class ExceptionMiddleware(
   {
     try
     {
-      
+      await next(context);
     }
-    catch (System.Exception)
+    catch (Exception ex)
     {
       
-      throw;
+      await HandleException(context, ex);
     }
+  }
+
+  private async Task HandleException(HttpContext context, Exception ex)
+  {
+    throw new NotImplementedException();
   }
 }
