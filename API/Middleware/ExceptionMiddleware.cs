@@ -1,5 +1,6 @@
 using System;
 using System.Net;
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Middleware;
@@ -36,5 +37,7 @@ public class ExceptionMiddleware(
         : null,
       Title = ex.Message
     }; 
+
+    var options = new JsonSerializerOptions {PropertyNamingPolicy = JsonNamingPolicy.CamelCase};
   }
 }
