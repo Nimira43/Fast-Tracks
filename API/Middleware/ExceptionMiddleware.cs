@@ -23,5 +23,6 @@ public class ExceptionMiddleware(
   private async Task HandleException(HttpContext context, Exception ex)
   {
     logger.LogError(ex, ex.Message);
+    context.Response.ContentType = "application/json";
   }
 }
