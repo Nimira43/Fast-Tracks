@@ -1,4 +1,5 @@
 using System;
+using System.Net;
 
 namespace API.Middleware;
 
@@ -24,5 +25,6 @@ public class ExceptionMiddleware(
   {
     logger.LogError(ex, ex.Message);
     context.Response.ContentType = "application/json";
+    context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
   }
 }
