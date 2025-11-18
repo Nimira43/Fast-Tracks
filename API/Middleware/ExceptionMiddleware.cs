@@ -30,7 +30,11 @@ public class ExceptionMiddleware(
 
     var response = new ProblemDetails
     {
-      
-    } 
+      Status = 500,
+      Detail = env.IsDevelopment() 
+        ? ex.StackTrace?.ToString()
+        : null,
+      Title = ex.Message
+    }; 
   }
 }
