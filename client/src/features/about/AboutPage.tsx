@@ -1,4 +1,4 @@
-import { Container, Typography } from '@mui/material'
+import { Button, ButtonGroup, Container, Typography } from '@mui/material'
 
 export default function AboutPage() {
   return (
@@ -9,6 +9,14 @@ export default function AboutPage() {
       >
         API Response Error Testing
       </Typography>
+      <ButtonGroup fullWidth>
+        <Button
+          variant='contained'
+          
+        >
+          400 Error Test
+        </Button>
+      </ButtonGroup>
     </Container>
   )
 }
