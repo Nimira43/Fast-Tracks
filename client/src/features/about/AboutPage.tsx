@@ -6,7 +6,7 @@ export default function AboutPage() {
   const [trigger401Error] = useLazyGet401ErrorQuery()
   const [trigger404Error] = useLazyGet404ErrorQuery()
   const [trigger500Error] = useLazyGet500ErrorQuery()
-  
+  const [triggerValidationError] = useLazyGetValidationErrorQuery()
 
   return (
     <Container maxWidth='lg'>
@@ -16,8 +16,9 @@ export default function AboutPage() {
       >
         API Response Error Testing
       </Typography>
-      <ButtonGroup fullWidth>
+      <ButtonGroup fullWidth >
         <Button
+          className='test-btn'
           variant='contained'
           onClick={
             () => trigger400Error().catch(
@@ -56,6 +57,16 @@ export default function AboutPage() {
           }
         >
           500 Error Test
+        </Button>
+        <Button
+          variant='contained'
+          onClick={
+            () => triggerValidationError().catch(
+              err => console.log(err)
+            )
+          }
+        >
+          Validation Error Test
         </Button>
       </ButtonGroup>
     </Container>
