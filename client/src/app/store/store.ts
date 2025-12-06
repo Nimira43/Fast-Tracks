@@ -3,10 +3,12 @@ import { counterSlice } from '../../features/contact/counterReducer'
 import { useDispatch, useSelector } from 'react-redux'
 import { catalogApi } from '../../features/catalog/catalogApi'
 import { uiSlice } from '../layout/uiSlice'
+import { errorApi } from '../../features/about/errorApi'
 
 export const store = configureStore({
   reducer: {
     [catalogApi.reducerPath]: catalogApi.reducer,
+    [errorApi.reducerPath]: errorApi.reducer,
     counter: counterSlice.reducer,
     ui: uiSlice.reducer
   },
