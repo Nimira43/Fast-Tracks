@@ -29,6 +29,7 @@ export default function AboutPage() {
           400 Error Test
         </Button>
         <Button
+          className='test-btn'
           variant='contained'
           onClick={
             () => trigger401Error().catch(
@@ -39,6 +40,7 @@ export default function AboutPage() {
           401 Error Test
         </Button>
         <Button
+          className='test-btn'
           variant='contained'
           onClick={
             () => trigger404Error().catch(
@@ -49,6 +51,7 @@ export default function AboutPage() {
           404 Error Test
         </Button>
         <Button
+          className='test-btn'
           variant='contained'
           onClick={
             () => trigger500Error().catch(
@@ -59,6 +62,7 @@ export default function AboutPage() {
           500 Error Test
         </Button>
         <Button
+          className='test-btn'
           variant='contained'
           onClick={
             () => triggerValidationError().catch(
