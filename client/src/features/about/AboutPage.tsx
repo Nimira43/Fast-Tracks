@@ -1,9 +1,10 @@
 import { Button, ButtonGroup, Container, Typography } from '@mui/material'
-import { useLazyGet400ErrorQuery, useLazyGet401ErrorQuery } from './errorApi'
+import { useLazyGet400ErrorQuery, useLazyGet401ErrorQuery, useLazyGet404ErrorQuery } from './errorApi'
 
 export default function AboutPage() {
   const [trigger400Error] = useLazyGet400ErrorQuery()
   const [trigger401Error] = useLazyGet401ErrorQuery()
+  const [trigger404Error] = useLazyGet404ErrorQuery()
 
   return (
     <Container maxWidth='lg'>
@@ -33,6 +34,16 @@ export default function AboutPage() {
           }
         >
           401 Error Test
+        </Button>
+        <Button
+          variant='contained'
+          onClick={
+            () => trigger404Error().catch(
+              err => console.log(err)
+            )
+          }
+        >
+          404 Error Test
         </Button>
       </ButtonGroup>
     </Container>
