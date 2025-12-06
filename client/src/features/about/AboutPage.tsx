@@ -1,6 +1,9 @@
 import { Button, ButtonGroup, Container, Typography } from '@mui/material'
+import { useLazyGet400ErrorQuery } from './errorApi'
 
 export default function AboutPage() {
+  const [trigger400Error] = useLazyGet400ErrorQuery()
+
   return (
     <Container maxWidth='lg'>
       <Typography
@@ -12,7 +15,11 @@ export default function AboutPage() {
       <ButtonGroup fullWidth>
         <Button
           variant='contained'
-          
+          onClick={
+            () => trigger400Error().catch(
+              err => console.log(err)
+            )
+          }
         >
           400 Error Test
         </Button>
