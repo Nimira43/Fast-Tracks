@@ -5,10 +5,12 @@ import { RouterProvider } from 'react-router-dom'
 import { router } from './app/routes/Routes'
 import { Provider } from 'react-redux'
 import { store } from './app/store/store'
+import { ToastContainer } from 'react-toastify'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
+      <ToastContainer />
       <RouterProvider 
       router={router}
       // future={{v7_startTransition: true}}  
