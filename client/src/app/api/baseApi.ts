@@ -24,12 +24,12 @@ export const baseQueryWithErrorHandling = async (
     switch (status) {
       case 400:
         toast.error(data as string)
-      break
+        break
       case 401:
         toast.error(data as string)
-      break
+        break
       default:
-      break
+        break
     }
   }
   return result
