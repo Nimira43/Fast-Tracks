@@ -19,7 +19,9 @@ export const baseQueryWithErrorHandling = async (
   api.dispatch(stopLoading())
 
   if (result.error) {
-    const {status, data} = result.error
+    const originalStatus = result.error.status === 'PARSING_ERROR' && result.error.originalStatus
+      ? result.error.originalStatus
+      : result.error.status
     
     switch (status) {
       case 400:
