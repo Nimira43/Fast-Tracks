@@ -33,7 +33,7 @@ export const baseQueryWithErrorHandling = async (
         toast.error(responseData as string)
         break
       case 401:
-        toast.error(responseData.title)
+        if (typeof responseData === 'object' && 'title' in responseData) toast.error(responseData.title)
         break
       default:
         break
