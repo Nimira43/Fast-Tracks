@@ -6,6 +6,8 @@ const customBaseQuery = fetchBaseQuery({
   baseUrl: 'https://localhost:5001/api'
 })
 
+type ErrorResponse =  | string | {title: string} | {errors: string[]}
+
 const sleep = () => new Promise(resolve => setTimeout(resolve, 1000))
 
 export const baseQueryWithErrorHandling = async (
@@ -19,6 +21,7 @@ export const baseQueryWithErrorHandling = async (
   api.dispatch(stopLoading())
 
   if (result.error) {
+    console.log(result.error)
     const originalStatus = result.error.status === 'PARSING_ERROR' && result.error.originalStatus
       ? result.error.originalStatus
       : result.error.status
