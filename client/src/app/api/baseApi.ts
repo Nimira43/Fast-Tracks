@@ -34,6 +34,7 @@ export const baseQueryWithErrorHandling = async (
         else if ('errors' in responseData) {
           toast.error('Validation Error.')
         }
+        else
         toast.error(responseData as string)
         break
       case 401:
