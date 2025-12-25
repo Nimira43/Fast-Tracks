@@ -26,7 +26,7 @@ export const baseQueryWithErrorHandling = async (
       ? result.error.originalStatus
       : result.error.status
     
-    const responseData = result.error.data
+    const responseData = result.error.data as ErrorResponse
     
     switch (originalStatus) {
       case 400:
