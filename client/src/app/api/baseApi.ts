@@ -23,7 +23,7 @@ export const baseQueryWithErrorHandling = async (
       ? result.error.originalStatus
       : result.error.status
     
-    switch (status) {
+    switch (originalStatus) {
       case 400:
         toast.error(data as string)
         break
