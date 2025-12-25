@@ -19,7 +19,15 @@ export const baseQueryWithErrorHandling = async (
 
   if (result.error) {
     const {status, data} = result.error
-    console.log({status, data})
+    
+    switch (key) {
+      case value:
+        
+        break;
+    
+      default:
+        break;
+    }
   }
   return result
 }
