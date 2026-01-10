@@ -32,7 +32,10 @@ export const baseQueryWithErrorHandling = async (
       case 400:
         if (typeof responseData === 'string') toast.error(responseData)
         else if ('errors' in responseData) {
-          toast.error('Validation Error.')
+          throw Object
+            .values(responseData.errors)
+            .flat()
+            .join(', ')
         }
         else 
         toast.error(responseData.title)
