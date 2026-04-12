@@ -13,9 +13,7 @@ export const basketApi = createApi({
       productId: number, quantity: number
     }>({
       query: ({ productId, quantity }) => ({
-        url: `
-          basket?productId=${productId}&quantity=${quantity}
-        `,
+        url: `basket?productId=${productId}&quantity=${quantity}`,
         method: 'POST'
       })
     }),
@@ -23,9 +21,7 @@ export const basketApi = createApi({
       productId: number, quantity: number
     }>({
       query: ({ productId, quantity }) => ({
-        url: `
-          basket?productId=${productId}&quantity=${quantity}
-        `,
+        url: `basket?productId=${productId}&quantity=${quantity}`,
         method: 'DELETE'
       })
     })
@@ -33,5 +29,6 @@ export const basketApi = createApi({
 })
 
 export const {
-  useFetchBasketQuery
+  useFetchBasketQuery,
+  useAddBasketItemMutation
 } = basketApi
