@@ -54,7 +54,7 @@ export default function ProductCard({ product }: Props) {
           color='warning'
           onClick={
             () => addBasketItem({
-              productId: product.id,
+              product,
               quantity: 1
             })
           }
