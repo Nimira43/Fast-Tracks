@@ -1,6 +1,7 @@
 import { Grid2, Typography } from '@mui/material'
 import { useFetchBasketQuery } from './basketApi'
 import BasketItem from './BasketItem'
+import OrderSummary from '../../app/shared/components/OrderSummary'
 
 export default function BasketPage() {
   const {data, isLoading } = useFetchBasketQuery()
@@ -29,6 +30,9 @@ export default function BasketPage() {
             key={item.productId}
           />
         ))}
+      </Grid2>
+      <Grid2 size={4}>
+        <OrderSummary />
       </Grid2>
     </Grid2>   
   )

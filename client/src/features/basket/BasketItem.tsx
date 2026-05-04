@@ -1,7 +1,8 @@
 import { Box, Grid2, IconButton, Paper, Typography } from '@mui/material'
 import { Item } from '../../app/models/basket'
 import { Add, Close, Remove } from '@mui/icons-material'
-import { useRemoveBasketItemMutation } from './basketApi'
+import { useAddBasketItemMutation, useRemoveBasketItemMutation } from './basketApi'
+import { currencyFormat } from '../../lib/utils'
 
 type Props = {
   item: Item
@@ -9,6 +10,7 @@ type Props = {
 
 export default function BasketItem({ item }: Props) {
   const [removeBasketItem] = useRemoveBasketItemMutation()
+  const [addBasketItem] = useAddBasketItemMutation()
 
   return (
     <Paper
@@ -52,14 +54,15 @@ export default function BasketItem({ item }: Props) {
             gap={3}
           >
             <Typography sx={{ fontSize: '1.1rem' }}>
-              £{(item.price / 100).toFixed(2)} x {item.quantity}
+              {currencyFormat(item.price)} x {item.quantity}
             </Typography>
             <Typography
               sx={{
                 fontSize: '1.1rem',
                 color: '#ff4500'
-              }}>
-              £{(item.price / 100 * item.quantity).toFixed(2)}
+              }}
+            >
+              {currencyFormat(item.price * item.quantity)}
             </Typography>
           </Box>
           <Grid2
@@ -86,6 +89,10 @@ export default function BasketItem({ item }: Props) {
               {item.quantity}
             </Typography>
             <IconButton    
+              onClick={() => addBasketItem({
+                product: item,
+                quantity: 1
+              })}
               color='success'
               size='small'
               sx={{
