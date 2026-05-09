@@ -12,7 +12,7 @@ export default function BasketPage() {
     </Typography>
   )
 
-  if (!data) return (
+  if (!data || data.items.length === 0) return (
     <Typography variant='h3'>
       Basket is currently empty
     </Typography>

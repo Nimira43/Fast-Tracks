@@ -1,10 +1,17 @@
 import { Box, Button, Divider, Paper, TextField, Typography } from '@mui/material'
 import { currencyFormat } from '../../../lib/utils'
+import { useFetchBasketQuery } from '../../../features/basket/basketApi'
+import { Item } from '../../models/basket'
 
 export default function OrderSummary() {
-  const subtotal = 0
-  const deliveryFee = 0
-
+  const { data: basket } = useFetchBasketQuery()
+  
+  const subtotal = basket?.items.reduce(
+    (sum: number, item: Item) => sum + item.quantity * item.price, 0
+  ) ?? 0
+  
+  const deliveryFee = subtotal > 10000 ? 0 : 500
+  
   return (
     <Box
       display='flex'
