@@ -2,6 +2,7 @@ import { Box, Button, Divider, Paper, TextField, Typography } from '@mui/materia
 import { currencyFormat } from '../../../lib/utils'
 import { useFetchBasketQuery } from '../../../features/basket/basketApi'
 import { Item } from '../../models/basket'
+import { Link } from 'react-router-dom'
 
 export default function OrderSummary() {
   const { data: basket } = useFetchBasketQuery()
@@ -89,8 +90,11 @@ export default function OrderSummary() {
             </Typography>
           </Box>
         </Box>
+
         <Box mt={2}>
           <Button
+            component={Link}
+            to='/checkout'
             variant='contained'
             color='warning'
             fullWidth
@@ -99,6 +103,8 @@ export default function OrderSummary() {
             Checkout
           </Button>
           <Button
+            component={Link}
+            to='/catelog'
             fullWidth
             sx={{ color: '#000'}}
           >
